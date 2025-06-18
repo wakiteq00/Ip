@@ -24,7 +24,7 @@ export default async function handler(req, res) {
         [
           {
             text: "Continue",
-            callback_data: "/joined"
+            callback_data: "/mainmenu"
           }
         ]
       ]
