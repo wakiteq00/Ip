@@ -18,7 +18,17 @@ export default async function handler(req, res) {
   const payload = {
     chat_id: chatId,
     text: "✅ You've been verified via CAPTCHA!",
-    parse_mode: "Markdown"
+    parse_mode: "Markdown",
+    reply_markup: {
+      inline_keyboard: [
+        [
+          {
+            text: "Continue",
+            callback_data: "/joined"
+          }
+        ]
+      ]
+    }
   };
 
   try {
