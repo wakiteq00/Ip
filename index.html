@@ -4,44 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ton Ghost 👻</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    body {
-      background: url('wall.png') no-repeat center center fixed;
-      background-size: cover;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body style="background: url('wall.png') no-repeat center center fixed; background-size: cover;">
   <div class="container">
     <img src="ton.png" alt="TON Logo" class="logo" />
     <h1>Ton Ghost 👻</h1>
     <p>Verify you're human to continue.</p>
 
-    <!-- Glowing TV Display -->
+    <!-- TV Stat Screen -->
     <div class="tv-screen">
-      <p class="tv-text">
-        📊 Total Visitors Today: 123<br>
-        📅 Yesterday: 245<br>
-        🌍 All-time Visitors: 12,345<br>
-        ⭐ Online Now: 17
+      <p class="tv-text" id="statsBox">
+        📊 Today: ...
+📅 Yesterday: ...
+🔢 Total: ...
+🔌 Online: ...
       </p>
     </div>
 
+    <!-- Verify Button -->
     <button id="verifyBtn">✅ Verify Me</button>
     <div id="message" class="hidden"></div>
   </div>
 
+  <!-- Footer Contacts -->
   <div class="contact-footer">
     <p>
-      📞 <a href="https://wa.me/2347033252751">WhatsApp</a> |
-      📧 <a href="mailto:iloveyou415150@gmail.com">Email</a> |
-      💬 <a href="https://t.me/premiumdungeon">@premiumdungeon</a>
+      <a href="https://t.me/premiumdungeon">@premiumdungeon</a> |
+      <a href="https://t.me/combohamsterdailys">🏪 My Channel</a> |
+      <a href="mailto:iloveyou415150@gmail.com">💵 Email</a> |
+      <a href="https://wa.me/2347033252751">🏣 WhatsApp</a>
     </p>
-    <p class="credit">👨‍💻 Made by Premium Dungeon</p>
+    <p class="credit">Designed by Premium Dungeon</p>
   </div>
 
-  <!-- Telegram WebApp -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="script.js"></script>
 </body>
