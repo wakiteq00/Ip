@@ -9,7 +9,7 @@ document.getElementById("verifyBtn").addEventListener("click", async () => {
     return;
   }
 
-  showMessage("⏳ Verifying...");
+  showMessage("⏳ Verifying....");
 
   try {
     const webhookUrl = `https://newsitecap.vercel.app/api/onWebhook?user_id=${userId}`;
