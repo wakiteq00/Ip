@@ -1,4 +1,3 @@
-/* ==== Base Layout ==== */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #101820;
@@ -13,39 +12,37 @@ body {
   overflow: hidden;
 }
 
-/* ==== Container (Card Body) ==== */
 .container {
   text-align: center;
-  padding: 20px;
-  border: 5px solid #00aaff;
-  border-radius: 15px;
+  padding: 18px 16px;
+  border: 2.5px solid #00aaff;
+  border-radius: 12px;
   background-color: #1b1f2a;
-  box-shadow: 0 0 15px #00aaff66;
-  width: 90%;
-  max-width: 320px;
+  box-shadow: 0 0 12px #00aaff55;
+  width: 92%;
+  max-width: 290px;
   background-image: linear-gradient(145deg, #101820, #0e1922);
-  animation: tvFlicker 1.2s infinite;
+  animation: flicker 1.5s infinite;
 }
 
-@keyframes tvFlicker {
+@keyframes flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.97; }
 }
 
-/* ==== Logo ==== */
 .logo {
-  width: 60px;
-  margin-bottom: 10px;
+  width: 58px;
+  margin-bottom: 12px;
 }
 
-/* ==== Button ==== */
+/* Smaller Verify Button */
 button {
   background-color: #00aaff;
   color: white;
   border: none;
-  padding: 12px 24px;
-  font-size: 14px;
-  border-radius: 10px;
+  padding: 10px 22px;
+  font-size: 13px;
+  border-radius: 9px;
   cursor: pointer;
   transition: background 0.3s;
   margin-top: 14px;
@@ -55,11 +52,10 @@ button:hover {
   background-color: #0088cc;
 }
 
-/* ==== Message Feedback ==== */
 #message {
-  margin-top: 14px;
+  margin-top: 12px;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 12.5px;
   white-space: pre-wrap;
 }
 
@@ -67,33 +63,32 @@ button:hover {
   display: none;
 }
 
-/* ==== TV Screen ==== */
+/* ✅ Updated Realistic TV Style */
 .tv-screen {
-  background-color: #0d1b0d;
-  border: 4px solid #00ff88;
-  border-radius: 10px;
-  padding: 12px;
-  margin: 20px auto 10px;
-  width: 90%;
-  max-width: 260px;
-  height: auto;
-  box-shadow: 0 0 10px #00ff88aa;
+  background: radial-gradient(ellipse at center, #112c11, #091409);
+  border: 3px solid #00ff88;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 18px auto 8px;
+  width: fit-content;
+  max-width: 240px;
+  box-shadow: inset 0 0 8px #00ff8899, 0 0 6px #00ff8877;
   font-family: 'Courier New', monospace;
   color: #00ff88;
   text-align: left;
-  font-size: 13px;
+  font-size: 12.3px;
 }
 
 .tv-text {
   margin: 0;
   white-space: pre-wrap;
-  line-height: 1.5;
+  line-height: 1.4;
   text-shadow: 0 0 2px #00ff88;
 }
 
-/* ==== Footer Contact Info ==== */
+/* Footer Contact (Compact) */
 .contact-footer {
-  font-size: 11px;
+  font-size: 10.5px;
   color: #00ccff;
   text-align: center;
   margin-top: 10px;
@@ -113,5 +108,5 @@ button:hover {
   margin-top: 3px;
   font-weight: bold;
   color: #00ffff;
-  font-size: 12px;
+  font-size: 11px;
 }
