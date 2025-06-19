@@ -1,7 +1,5 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('https://ibb.co/HfSmCnwp') no-repeat center center fixed;
-  background-size: cover;
   color: #fefefe;
   margin: 0;
   padding: 0;
@@ -64,7 +62,6 @@ button:hover {
   display: none;
 }
 
-/* Glowing TV */
 .tv-screen {
   background-color: #081108;
   border: 4px solid #00ff88;
@@ -88,7 +85,6 @@ button:hover {
   transform: scale(1.03);
 }
 
-/* Contact Footer */
 .contact-footer {
   font-size: 11px;
   color: #00ccff;
