@@ -14,20 +14,14 @@ body {
 
 .container {
   text-align: center;
-  padding: 20px;
-  border: 3px solid #00aaff;
-  border-radius: 15px;
+  padding: 15px;
+  border: 2px solid #00aaff; /* thinner border */
+  border-radius: 12px;
   background-color: #1b1f2a;
-  box-shadow: 0 0 10px #00aaff66;
-  width: 90%;
+  box-shadow: 0 0 8px #00aaff55;
+  width: 92%;
   max-width: 320px;
   background-image: linear-gradient(145deg, #101820, #0e1922);
-  animation: flicker 1s infinite;
-}
-
-@keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.98; }
 }
 
 .logo {
@@ -62,23 +56,31 @@ button:hover {
   display: none;
 }
 
-/* Glowing "TV" screen */
+/* Refined TV screen box */
 .tv-screen {
   background-color: #0d1b0d;
-  border: 3px solid #00ff88;
+  border: 2px solid #00ff88;
   border-radius: 8px;
-  padding: 10px;
+  padding: 10px 15px;
   margin: 20px auto 10px;
-  width: 200px;
-  box-shadow: 0 0 12px #00ff88aa;
+  width: 260px;  /* longer length */
+  height: 80px;  /* shorter height */
+  box-shadow: 0 0 10px #00ff88aa;
   font-family: 'Courier New', monospace;
   color: #00ff88;
   text-align: left;
   font-size: 12px;
+  line-height: 1.4;
   text-shadow: 0 0 2px #00ff88;
+  overflow-y: auto;
 }
 
-/* Footer Contact */
+.tv-text {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Footer Contact Info */
 .contact-footer {
   font-size: 11px;
   color: #00ccff;
@@ -97,7 +99,7 @@ button:hover {
 }
 
 .credit {
-  margin-top: 3px;
+  margin-top: 4px;
   font-weight: bold;
   color: #00ffff;
   font-size: 12px;
