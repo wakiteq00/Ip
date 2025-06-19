@@ -63,8 +63,8 @@ button:hover {
   border-radius: 8px;
   padding: 10px 15px;
   margin: 20px auto 10px;
-  width: 260px;  /* longer length */
-  height: 80px;  /* shorter height */
+  width: 180px;     /* reduced width */
+  height: 120px;    /* increased height */
   box-shadow: 0 0 10px #00ff88aa;
   font-family: 'Courier New', monospace;
   color: #00ff88;
