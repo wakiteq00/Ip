@@ -7,7 +7,7 @@ let stats = {
   lastDate: new Date().toLocaleDateString()
 };
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
   const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
   const now = Date.now();
   const todayStr = new Date().toLocaleDateString();
@@ -23,9 +23,12 @@ export default async function handler(req, res) {
     stats.users[ip] = now;
     stats.today++;
     stats.total++;
+  } else {
+    stats.users[ip] = now;
   }
 
   stats.online = Object.values(stats.users).filter(t => now - t < 5 * 60 * 1000).length;
+
   res.status(200).json({
     today: stats.today,
     yesterday: stats.yesterday,
