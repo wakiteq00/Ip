@@ -1,8 +1,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('/wall.png') no-repeat center center fixed;
+  background: url('wall.png') no-repeat center center fixed;
   background-size: cover;
-  color: #fefefe;
   margin: 0;
   padding: 0;
   display: flex;
@@ -16,19 +15,19 @@ body {
 .container {
   text-align: center;
   padding: 20px;
-  border: 3px solid #00aaff;
-  border-radius: 12px;
-  background-color: rgba(27, 31, 42, 0.85);
-  box-shadow: 0 0 12px #00aaff99;
+  border: 5px solid #00aaff;
+  border-radius: 15px;
+  background-color: rgba(27, 31, 42, 0.8); /* Adjusted transparency here */
+  box-shadow: 0 0 15px #00aaff66;
   width: 90%;
-  max-width: 310px;
+  max-width: 320px;
   background-image: linear-gradient(145deg, #101820, #0e1922);
-  animation: flicker 1.5s infinite;
+  animation: tvFlicker 1s infinite;
 }
 
-@keyframes flicker {
+@keyframes tvFlicker {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.95; }
+  50% { opacity: 0.97; }
 }
 
 .logo {
@@ -44,13 +43,12 @@ button {
   font-size: 14px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+  transition: background 0.3s;
   margin-top: 14px;
 }
 
 button:hover {
   background-color: #0088cc;
-  transform: scale(1.05);
 }
 
 #message {
@@ -64,48 +62,42 @@ button:hover {
   display: none;
 }
 
-/* Glowing TV */
+/* Small TV Screen */
 .tv-screen {
-  background-color: #081108;
+  background-color: #0d1b0d;
   border: 4px solid #00ff88;
-  border-radius: 8px;
-  padding: 12px;
+  border-radius: 10px;
+  padding: 10px;
   margin: 20px auto 10px;
-  width: 230px;
-  height: 100px;
-  box-shadow: 0 0 8px #00ff88cc, 0 0 15px #00ff8855 inset;
+  width: 200px;
+  height: 120px;
+  box-shadow: 0 0 10px #00ff88aa;
   font-family: 'Courier New', monospace;
   color: #00ff88;
   text-align: left;
   overflow-y: auto;
   font-size: 12px;
-  line-height: 1.4;
+}
+
+.tv-text {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.3;
   text-shadow: 0 0 2px #00ff88;
-  transition: transform 0.3s ease;
 }
 
-.tv-screen:hover {
-  transform: scale(1.03);
-}
-
-/* Contact Footer */
+/* Footer Contacts (Mini) */
 .contact-footer {
   font-size: 11px;
   color: #00ccff;
   text-align: center;
   margin-top: 10px;
   line-height: 1.4;
-  backdrop-filter: blur(4px);
-  background: rgba(0, 0, 0, 0.4);
-  padding: 6px 10px;
-  border-top: 1px solid #00aaff88;
-  width: 100%;
 }
 
 .contact-footer a {
   color: #00ffff;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .contact-footer a:hover {
@@ -113,9 +105,8 @@ button:hover {
 }
 
 .credit {
-  margin-top: 4px;
+  margin-top: 3px;
   font-weight: bold;
   color: #00ffff;
   font-size: 12px;
-  text-shadow: 0 0 4px #00ffff99;
 }
