@@ -8,7 +8,7 @@ document.getElementById("verifyBtn").addEventListener("click", async () => {
   showMessage("⏳ Verifying....");
 
   try {
-    const res = await fetch(`https://newsitecap.vercel.app/api/onWebhook?user_id=${userId}`);
+    const res = await fetch(`/api/onWebhook?user_id=${userId}`);
     const text = await res.text();
 
     if (text.includes("ban") || text.includes("vpn")) {
@@ -33,12 +33,12 @@ function showMessage(msg) {
   div.classList.remove("hidden");
 }
 
-// Live stat update
+// Load real-time stats
 async function loadStats() {
   try {
     const res = await fetch("/api/stats");
     const data = await res.json();
-    document.getElementById("statsBox").innerText = `📊 Today: ${data.today}\n📅 Yesterday: ${data.yesterday}\n🔢 Total: ${data.total}\n🔌 Online: ${data.online}`;
+    document.getElementById("statsBox").innerHTML = `📊 Today: ${data.today}<br>📅 Yesterday: ${data.yesterday}<br>🔢 Total: ${data.total}<br>🔌 Online: ${data.online}`;
   } catch (err) {
     console.error("Stats load failed", err);
   }
@@ -46,4 +46,3 @@ async function loadStats() {
 
 loadStats();
 setInterval(loadStats, 10000);
-
