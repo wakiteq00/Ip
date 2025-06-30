@@ -16,7 +16,7 @@ document.getElementById("verifyBtn").addEventListener("click", async () => {
     } else if (text.includes("verified") || res.ok) {
       showMessage("✅ Verified! Back to Bot");
       setTimeout(() => {
-        window.location.href = "https://t.me/AIRTIMEPLUSBOT?start= "+res.ok+"";
+        window.location.href = "https://t.me/AIRTIMEPLUSBOT?start= "+res+"";
       }, 1500);
     } else {
       showMessage("❌ Unknown error occurred.\n\n" + text);
