@@ -5,22 +5,41 @@ document.getElementById("verifyBtn").addEventListener("click", async () => {
   const userId = tg.initDataUnsafe?.user?.id;
   if (!userId) return showMessage("❌ Telegram WebApp not loaded properly.");
 
-  showMessage("⏳ Verifying....");
+  showMessage("⏳ Verifying...");
 
   try {
-    const res = await fetch(`/api/onWebhook?user_id=${userId}`);
+    // Get user IP
+    const ipRes = await fetch("https://api.ipify.org?format=json");
+    const ipData = await ipRes.json();
+    const ip = ipData.ip;
+
+    // Send to your backend API
+    const res = await fetch(`/api/onWebhook?user_id=${userId}&ip=${ip}`);
     const text = await res.text();
+
+    // Optionally send directly to your Telegram Bot (via webhook or backend logic)
+    await fetch(`https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: userId,
+        text: `🛡️ New Verification\nUser ID: ${userId}\nIP: ${ip}`
+      }),
+    });
 
     if (text.includes("ban") || text.includes("vpn")) {
       showMessage("❌ Access denied due to VPN or ban.");
     } else if (text.includes("verified") || res.ok) {
       showMessage("✅ Verified! Back to Bot");
       setTimeout(() => {
-        window.location.href = "https://t.me/AIRTIMEPLUSBOT?start= "+res.ip+"";
+        window.location.href = `https://t.me/AIRTIMEPLUSBOT?start=${ip}`;
       }, 1500);
     } else {
       showMessage("❌ Unknown error occurred.\n\n" + text);
     }
+
   } catch (err) {
     console.error(err);
     showMessage("❌ Could not contact the server.");
