@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: user_id,
-        text: "✅ You've been verified via CAPTCHA!",
+        text: ip,
         parse_mode: "Markdown",
         reply_markup: {
           inline_keyboard: [[{ text: "Continue", callback_data: "/mainmenu" }]]
