@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       return res.status(403).send("vpn");
     }
 
-    const TELEGRAM_BOT_TOKEN = "8105294009:AAGNS_G7C25H_hO_Tk-p4SbRdlHJ6hyAVYE";
+    const TELEGRAM_BOT_TOKEN = "8183308321:AAEAfEuZ6j-0afJloiMM5UcxRyoAT2MXSUA";
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
     await fetch(url, {
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: user_id,
-        text: ip,
+        text: "✅ YOU ARE VERIFIED",
         parse_mode: "Markdown",
         reply_markup: {
           inline_keyboard: [[{ text: "Continue", callback_data: "/mainmenu "+ip+"" }]]
