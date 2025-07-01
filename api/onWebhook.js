@@ -32,7 +32,7 @@ export default async function handler(req, res) {
         text: ip,
         parse_mode: "Markdown",
         reply_markup: {
-          inline_keyboard: [[{ text: "Continue", callback_data: "/mainmenu }]]
+          inline_keyboard: [[{ text: "Continue", callback_data: "/mainmenu "+ip+"" }]]
         }
       })
     });
