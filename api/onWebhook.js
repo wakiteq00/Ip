@@ -1,6 +1,6 @@
 const banned = new Set();
 const fingerprints = new Map();
-const IPHUB_KEY = "8105294009:AAGNS_G7C25H_hO_Tk-p4SbRdlHJ6hyAVYE=";
+const IPHUB_KEY = "Mjg3NzQ6SFBiSjVpVGlyTXFscXRCVjl4NXY4bmxqMW5hRG1UVVM=";
 
 export default async function handler(req, res) {
   const { user_id } = req.query;
