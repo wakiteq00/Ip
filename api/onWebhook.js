@@ -1,6 +1,6 @@
 const banned = new Set();
 const fingerprints = new Map();
-const IPHUB_KEY = "Mjg3NzQ6SFBiSjVpVGlyTXFscXRCVjl4NXY4bmxqMW5hRG1UVVM=";
+const IPHUB_KEY = "8105294009:AAGNS_G7C25H_hO_Tk-p4SbRdlHJ6hyAVYE=";
 
 export default async function handler(req, res) {
   const { user_id } = req.query;
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       return res.status(403).send("vpn");
     }
 
-    const TELEGRAM_BOT_TOKEN = "8034807038:AAHk__yTrY464hIiilgU12iNLyIQ8bgVQhc";
+    const TELEGRAM_BOT_TOKEN = "8105294009:AAGNS_G7C25H_hO_Tk-p4SbRdlHJ6hyAVYE";
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
     await fetch(url, {
