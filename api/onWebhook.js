@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       return res.status(403).send("vpn");
     }
 
-    const TELEGRAM_BOT_TOKEN = "8183308321:AAEAfEuZ6j-0afJloiMM5UcxRyoAT2MXSUA";
+    const TELEGRAM_BOT_TOKEN = "7796354415:AAFHwcUWw9zSJ_SJnZpoI-uurkmlh3Ogri0";
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
     await fetch(url, {
